@@ -1,0 +1,23 @@
+{
+  // Config locale de l'extension Prettier
+  // Configuration des options Prettier pour ce projet :
+  // - "printWidth": Définit la largeur maximale d'une ligne à 100 caractères.
+  // - "tabWidth": Définit la largeur d'une tabulation à 2 espaces.
+  // - "arrowParens": Force l'utilisation de parenthèses autour des paramètres des fonctions fléchées.
+  // - "bracketSpacing": Ajoute un espace entre les accolades dans les objets.
+  // - "endOfLine": Utilise automatiquement le style de fin de ligne approprié selon le système d'exploitation.
+  "prettier.printWidth": 100,
+  "prettier.tabWidth": 4,
+  "prettier.arrowParens": "always",
+  "prettier.bracketSpacing": true,
+  "prettier.endOfLine": "auto",
+  // Config locale du projet (remplace la config globale)
+  "turboConsoleLog.logMessagePrefix": "[DEBUG] Project",
+  "turboConsoleLog.includeLineNum": true,
+  "turboConsoleLog.addSemicolonInTheEnd": true,
+  "turboConsoleLog.includeFilename": true,
+  // Config locale de l'extension ESLint
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+}
