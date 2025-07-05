@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlaBlaCar - Partagez vos trajets</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Header -->
+      <nav id="header">
+        <div class="navbar">
+          <div class="nav-container">
+            <div class="nav-logo">
+              <h2>🚗 BlaBlaCar</h2>
+            </div>
+            <div class="nav-links" id="navLinks">
+              <a href="/home.html" data-route="/">Accueil</a>
+              <a href="/search.html" data-route="/search">Rechercher</a>
+              <a href="/publish.html" data-route="/publish" class="protected"
+                >Publier</a
+              >
+              <a href="/my-trips.html" data-route="/my-trips" class="protected"
+                >Mes trajets</a
+              >
+              <a href="/messages.html" data-route="/messages" class="protected"
+                >Messages</a
+              >
+              <a href="/profile.html" data-route="/profile" class="protected"
+                >Profil</a
+              >
+            </div>
+            <div class="nav-auth" id="navAuth">
+              <button
+                class="btn-secondary"
+                data-route="/login"
+                onclick="goToPage('/login.html')"
+              >
+                Connexion
+              </button>
+              <button
+                class="btn-primary"
+                data-route="/register"
+                onclick="goToPage('/register.html')"
+              >
+                Inscription
+              </button>
+            </div>
+            <button id="logoutBtn" class="btn-secondary" style="display: none">
+              Déconnexion
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Alert container -->
+      <div id="alert-container"></div>
+
+      <!-- Main content -->
+      <main id="main-content" class="main-content">
+        <div class="page messages-page">
+          <div class="chat-container">
+            <div class="chat-sidebar">
+              <h3>Conversations</h3>
+              <div id="usersList" class="users-list">
+                <div
+                  class="user-item active"
+                  data-user-id="1"
+                  data-user-name="Abdellah MAZAR"
+                >
+                  <div class="user-info">
+                    <div class="user-name">Abdellah MAZAR</div>
+                    <div class="user-relation">Conducteur</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="chat-main">
+              <div id="chatHeader" class="chat-header">
+                <h4>Conversation avec Abdellah MAZAR</h4>
+              </div>
+              <div id="chatMessages" class="chat-messages">
+                <div class="message sent">
+                  test2
+                  <div class="message-time">12:39:42</div>
+                </div>
+                <div class="message sent">
+                  bonjour
+                  <div class="message-time">12:39:46</div>
+                </div>
+                <div class="message received">
+                  bonjour
+                  <div class="message-time">12:39:55</div>
+                </div>
+              </div>
+              <div id="chatInput" class="chat-input" style="display: flex">
+                <input
+                  type="text"
+                  id="messageInput"
+                  placeholder="Tapez votre message..."
+                />
+                <button id="sendBtn" class="btn-primary">Envoyer</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="scripts.js"></script>
+</html>

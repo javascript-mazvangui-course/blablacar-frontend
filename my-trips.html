@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlaBlaCar - Partagez vos trajets</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Header -->
+      <nav id="header">
+        <div class="navbar">
+          <div class="nav-container">
+            <div class="nav-logo">
+              <h2>🚗 BlaBlaCar</h2>
+            </div>
+            <div class="nav-links" id="navLinks">
+              <a href="/home.html" data-route="/">Accueil</a>
+              <a href="/search.html" data-route="/search">Rechercher</a>
+              <a href="/publish.html" data-route="/publish" class="protected"
+                >Publier</a
+              >
+              <a href="/my-trips.html" data-route="/my-trips" class="protected"
+                >Mes trajets</a
+              >
+              <a href="/messages.html" data-route="/messages" class="protected"
+                >Messages</a
+              >
+              <a href="/profile.html" data-route="/profile" class="protected"
+                >Profil</a
+              >
+            </div>
+            <div class="nav-auth" id="navAuth">
+              <button
+                class="btn-secondary"
+                data-route="/login"
+                onclick="goToPage('/login.html')"
+              >
+                Connexion
+              </button>
+              <button
+                class="btn-primary"
+                data-route="/register"
+                onclick="goToPage('/register.html')"
+              >
+                Inscription
+              </button>
+            </div>
+            <button id="logoutBtn" class="btn-secondary" style="display: none">
+              Déconnexion
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Alert container -->
+      <div id="alert-container"></div>
+
+      <!-- Main content -->
+      <main id="main-content" class="main-content">
+        <div class="page my-trips-page">
+          <div class="trips-container">
+            <div class="trips-section">
+              <h2>Mes trajets en tant que conducteur</h2>
+              <div id="driverTrips" class="trips-list">
+                <p class="loading">Aucun trajet publié</p>
+
+                <div class="trip-card">
+                  <div class="trip-header">
+                    <div class="trip-route">Rennes → Nantes</div>
+                    <div class="trip-price">10€</div>
+                  </div>
+                  <div class="trip-details">
+                    <div class="trip-detail">
+                      <span>📅</span>
+                      <span>2025-07-05</span>
+                    </div>
+                    <div class="trip-detail">
+                      <span>🕐</span>
+                      <span>12:35</span>
+                    </div>
+                    <div class="trip-detail">
+                      <span>👥</span>
+                      <span>4 places restantes</span>
+                    </div>
+                  </div>
+                  <div class="trip-conductor">0 réservation(s)</div>
+                </div>
+              </div>
+            </div>
+            <div class="trips-section">
+              <h2>Mes trajets en tant que voyageur</h2>
+              <div id="passengerTrips" class="trips-list">
+                <p class="loading">Aucun trajet réservé</p>
+                <div class="trip-card">
+                  <div class="trip-header">
+                    <div class="trip-route">Rennes → Nantes</div>
+                    <div class="trip-price">10€</div>
+                  </div>
+                  <div class="trip-details">
+                    <div class="trip-detail">
+                      <span>📅</span>
+                      <span>2025-07-05</span>
+                    </div>
+                    <div class="trip-detail">
+                      <span>🕐</span>
+                      <span>12:35</span>
+                    </div>
+                  </div>
+                  <div class="trip-conductor">Conducteur: Abdellah MAZAR</div>
+                  <div class="trip-action">
+                    <button
+                      class="btn-primary btn-small contact-driver"
+                      data-driver-id="1"
+                      data-driver-name="Abdellah MAZAR"
+                    >
+                      💬 Contacter le conducteur
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="scripts.js"></script>
+</html>
