@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BlaBlaCar - Partagez vos trajets</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
     <div id="app">
@@ -21,7 +21,7 @@
               <a href="/publish.html" data-route="/publish" class="protected"
                 >Publier</a
               >
-              <a href="/my-trips.html" data-route="/my-trips" class="protected"
+              <a href="/pages/my-trips/my-trips.html" data-route="/my-trips" class="protected"
                 >Mes trajets</a
               >
               <a href="/messages.html" data-route="/messages" class="protected"
@@ -66,27 +66,7 @@
               <div id="driverTrips" class="trips-list">
                 <p class="loading">Aucun trajet publié</p>
 
-                <div class="trip-card">
-                  <div class="trip-header">
-                    <div class="trip-route">Rennes → Nantes</div>
-                    <div class="trip-price">10€</div>
-                  </div>
-                  <div class="trip-details">
-                    <div class="trip-detail">
-                      <span>📅</span>
-                      <span>2025-07-05</span>
-                    </div>
-                    <div class="trip-detail">
-                      <span>🕐</span>
-                      <span>12:35</span>
-                    </div>
-                    <div class="trip-detail">
-                      <span>👥</span>
-                      <span>4 places restantes</span>
-                    </div>
-                  </div>
-                  <div class="trip-conductor">0 réservation(s)</div>
-                </div>
+                
               </div>
             </div>
             <div class="trips-section">
@@ -126,5 +106,6 @@
       </main>
     </div>
   </body>
-  <script src="scripts.js"></script>
+  <script src="/scripts.js"></script>
+  <script src="/pages/my-trips/MyTrips.js"></script>
 </html>
